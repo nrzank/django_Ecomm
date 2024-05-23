@@ -77,6 +77,7 @@ class Cart(models.Model):
         return f"Cart of {self.user}"
 
 
+# 7 элементы корзины
 class CartItem(models.Model):
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
